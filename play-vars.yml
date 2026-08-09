@@ -1,0 +1,8 @@
+---
+  - name: variables
+    hosts: local
+    connection: local
+    tasks:
+    - name: print course info
+      ansible.builtin.debug:
+        msg: "Trainer: Siva, Duration: 100 Hrs, Timings: morning batch"
