@@ -4,9 +4,9 @@
     connection: local
 
     vars:
-      - Trainer: "Siva"
-      - Duration: "100 hrs"
-      - Timings: "morning batch"
+      - Trainer: Siva
+      - Duration: 100 hrs
+      - Timings: morning batch
     tasks:
     - name: print course info
       ansible.builtin.debug:
