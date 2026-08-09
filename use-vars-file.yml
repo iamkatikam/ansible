@@ -1,0 +1,12 @@
+---
+  - name: varibale file
+    hosts: local
+    connection: local
+
+    vars_file:
+      - vars.yml
+      
+    tasks:
+    - name: variable file usage
+      ansible.builtin.debug:
+        msg: "Trainer: {{ Trainer }}, Duration: {{ Duration }}, Timings: {{ Timings }}"
