@@ -1,12 +1,13 @@
 ---
-  - name: loops in ansible
+  - name: loop in ansible
     hosts: local
     connection: local
     tasks:
-    - name: pront values
-      ansible.builtin.debug:
-        msg: "{{ item }}" #item is a reserved keyword
+    - name: install packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: installed #item is a reserved keyword
       loop:
-        - suresh
-        - naresh
-        - ramesh
+        - nginx
+        - zip
+        - mysql
