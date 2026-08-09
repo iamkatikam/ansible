@@ -1,0 +1,20 @@
+---
+  - name: ansible data types
+    hosts: local
+    connection: local
+    vars:
+      DURATION: 120 #num
+      COURSE: "DevSecOps with AWS" #string
+      IS_LIVE: true # boolean
+      CONCEPTS: #list
+        - Linux
+        - Shell
+        - Ansible
+      DETAILS: #dictionary
+        CICD: Jenkins
+        CM: Ansible
+        IAAC: Terraform
+    tasks:
+    - name: anisble data types info
+      ansible.builtin.debug:
+        msg: "durartion: {{ DURATION }}, course name: {{ COURSE }}, live: {{ IS_LIVE }}, concepts: {{ CONCEPTS }}, details: {{ DETAILS }}"
