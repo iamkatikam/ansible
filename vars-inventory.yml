@@ -1,0 +1,8 @@
+---
+  - name: varibales from inventory file
+    hosts: web
+    gather_facts: false
+    tasks:
+    - name: print variables info from inventory file
+      ansible.builtin.debug:
+        msg: "user name is: {{ username }} and password is: {{ password }}  "
