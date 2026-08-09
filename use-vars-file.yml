@@ -3,9 +3,9 @@
     hosts: local
     connection: local
 
-    vars_file:
+    vars_files:
       - vars.yml
-      
+
     tasks:
     - name: variable file usage
       ansible.builtin.debug:
