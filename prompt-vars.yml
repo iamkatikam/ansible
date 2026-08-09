@@ -2,14 +2,14 @@
   - name: user input in ansible
     hosts: local
     connection: local
-    tasks:
-    - name: prompt variables 
-      vars_prompt:
-        - name: username
-          prompt: "Enter username"
-        - name: password
-          prompt: "Enter password"
-          private: true
-    - name: print variables
-      ansible.builtin.debug:
-        msg: "user name is: {{ username }} and password is: {{ password }}  "
+
+    vars_prompt:
+      - name: username
+        prompt: "Enter username"
+      - name: password
+        prompt: "Enter password"
+        private: true
+    task:
+      - name: print variables
+        ansible.builtin.debug:
+          msg: "user name is: {{ username }} and password is: {{ password }}  "
